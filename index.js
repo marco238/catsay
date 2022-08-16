@@ -1,4 +1,5 @@
 const cowsay = require('cowsay');
+const say = require('say')
 
 const students = [
   'Carmen',
@@ -7,15 +8,18 @@ const students = [
   'Ignacio',
   'Juan',
   'Julián',
-  'Marek',
+  'Márek',
   'Marina L',
-  'Marina B',
+  'Marina',
   'Mer',
   'Nahum',
   'Violeta',
 ];
 
+const randomNumber = Math.random();
+const randomWord = students[Math.floor(randomNumber * students.length)]
 console.log(cowsay.say({
-  text : students[Math.floor(Math.random() * students.length)],
-  f: Math.random() > 0.8 ? 'cat' : 'cat2'
+  text : randomWord,
+  f: randomNumber > 0.8 ? 'cat' : 'cat2'
 }));
+say.speak(randomWord, 'Juan');

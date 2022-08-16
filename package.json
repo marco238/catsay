@@ -9,6 +9,7 @@
   "author": "Marcos",
   "license": "ISC",
   "dependencies": {
-    "cowsay": "^1.5.0"
+    "cowsay": "^1.5.0",
+    "say": "^0.16.0"
   }
 }
