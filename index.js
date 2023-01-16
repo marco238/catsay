@@ -1,4 +1,3 @@
-// start node server without view engine on port 3008 and reexectute logic on "enter" key
 const express = require('express');
 const cowsay = require('cowsay');
 const say = require('say');
@@ -32,9 +31,6 @@ process.stdin.on('keypress', (str, key) => {
       students.push(avoid.shift());
       students.sort((a, b) => a.localeCompare(b))
     }
-
-    console.log(students);
-    console.log(avoid);
   }
 });
 
