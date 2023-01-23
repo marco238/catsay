@@ -1,6 +1,7 @@
 const express = require('express');
 const cowsay = require('cowsay');
 const say = require('say');
+const readline = require('readline');
 const students = require('./students');
 
 const app = express();
@@ -8,8 +9,6 @@ const port = process.env.PORT || 3008;
 
 const avoid = [];
 
-
-const readline = require('readline');
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 process.stdin.on('keypress', (str, key) => {
@@ -35,4 +34,3 @@ process.stdin.on('keypress', (str, key) => {
 });
 
 app.listen(port, () => console.log('Press "return" key...'));
-
