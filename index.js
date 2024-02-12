@@ -26,7 +26,7 @@ process.stdin.on('keypress', (str, key) => {
     
     avoid.push(randomWord);
     students.splice(students.indexOf(randomWord), 1);
-    if (avoid.length > 7) {
+    if (avoid.length > Math.round(students.length / 2)) {
       students.push(avoid.shift());
       students.sort((a, b) => a.localeCompare(b))
     }
